@@ -68,3 +68,27 @@ input {
   background-color: transparent;
   border: none;
 }
+
+.nav-links {
+  text-decoration: none;
+}
+
+.user-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+}
+
+.user-img img {
+  height: 200px;
+  width: 200px;
+}
+
+.user-name {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

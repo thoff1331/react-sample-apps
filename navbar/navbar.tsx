@@ -4,10 +4,19 @@ export default function Navbar() {
   return (
     <div className="nav-items">
       <li>
-        <Link to="/counter">Counter</Link>
+        <Link className="nav-links" to="/counter">
+          Counter
+        </Link>
       </li>
       <li>
-        <Link to="/todo">Todo</Link>
+        <Link className="nav-links" to="/todo">
+          Todo
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-links" to="/userfetch">
+          User
+        </Link>
       </li>
     </div>
   );

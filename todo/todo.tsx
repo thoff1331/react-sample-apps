@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 
 export default function Todo() {
-  const [items, setItems] = useState(['Clean']);
+  const [items, setItems] = useState(['Brush Up on React']);
   const [userInput, setUserInput] = useState('');
   function addItems() {
     setItems((items) => [...items, userInput]);
@@ -10,7 +10,6 @@ export default function Todo() {
   }
   function removeItems(e) {
     let itemToRemove = e.innerHTML;
-    console.log(items.indexOf(itemToRemove));
     setItems((items) => items.filter((el) => el !== itemToRemove));
   }
   return (
@@ -23,9 +22,13 @@ export default function Todo() {
         />{' '}
         <button onClick={() => addItems()}>Add</button>
       </div>
-      {items.map((el) => {
-        return <h1 onClick={(e) => removeItems(e.target)}>{el}</h1>;
-      })}
+      {items.length > 0 ? (
+        items.map((el) => {
+          return <h1 onClick={(e) => removeItems(e.target)}>{el}</h1>;
+        })
+      ) : (
+        <h1>All Done Take a Break :)</h1>
+      )}
 
       <p>Click an item to delete it from the list</p>
     </div>
